@@ -1,0 +1,12 @@
+C:\Users\kelly\source\repos\Analizador\Analizador\Debug\Analizador.vcxproj.AssemblyReference.cache
+C:\Users\kelly\source\repos\Analizador\Analizador\Debug\Analizador.MyForm.resources
+C:\Users\kelly\source\repos\Analizador\Analizador\Debug\Analizador.vcxproj.GenerateResource.cache
+C:\Users\victo\source\repos\Analizador\Analizador\Debug\Analizador.vcxproj.AssemblyReference.cache
+C:\Users\victo\source\repos\Analizador\Analizador\Debug\Analizador.MyForm.resources
+C:\Users\victo\source\repos\Analizador\Analizador\Debug\Analizador.vcxproj.GenerateResource.cache
+C:\Users\victo\source\repos\Analizador1\Analizador\Debug\Analizador.vcxproj.AssemblyReference.cache
+C:\Users\victo\source\repos\Analizador1\Analizador\Debug\Analizador.MyForm.resources
+C:\Users\victo\source\repos\Analizador1\Analizador\Debug\Analizador.vcxproj.GenerateResource.cache
+C:\Users\victo\source\repos\Talos\Analizador\Debug\Analizador.vcxproj.AssemblyReference.cache
+C:\Users\victo\source\repos\Talos\Analizador\Debug\Analizador.MyForm.resources
+C:\Users\victo\source\repos\Talos\Analizador\Debug\Analizador.vcxproj.GenerateResource.cache

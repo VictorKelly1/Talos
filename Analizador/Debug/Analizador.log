@@ -1,0 +1,24 @@
+﻿  MyForm.cpp
+C:\Users\victo\source\repos\Talos\Analizador\Lexico.h(63,19): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  (compilando archivo de origen "MyForm.cpp")
+  
+C:\Users\victo\source\repos\Talos\Analizador\Sintactico.h(254,31): warning C4018: '<': no coinciden signed/unsigned
+  (compilando archivo de origen "MyForm.cpp")
+  
+  Sintactico.cpp
+C:\Users\victo\source\repos\Talos\Analizador\Lexico.h(63,19): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  (compilando archivo de origen "Sintactico.cpp")
+  
+C:\Users\victo\source\repos\Talos\Analizador\Sintactico.h(254,31): warning C4018: '<': no coinciden signed/unsigned
+  (compilando archivo de origen "Sintactico.cpp")
+  
+  main.cpp
+C:\Users\victo\source\repos\Talos\Analizador\Lexico.h(63,19): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  (compilando archivo de origen "main.cpp")
+  
+C:\Users\victo\source\repos\Talos\Analizador\Sintactico.h(254,31): warning C4018: '<': no coinciden signed/unsigned
+  (compilando archivo de origen "main.cpp")
+  
+  Generando código...
+  Lexico.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  Analizador.vcxproj -> C:\Users\victo\source\repos\Talos\Debug\Analizador.exe
