@@ -72,106 +72,106 @@ public:
     std::vector<std::vector<int>> matrizProducciones = {
         {0},
         {8, 4, 2}, 
-        {2, 147, 138, 137, 136, 135},
+        {2, 1002, 1031, 1001, 1000, 1030},
         {-100},             
         {4, 9},  
         {4, 14},
         {4, 16},
         {-100},
-        {141, 17, 140},
-        {147, 30, 143, 11, 142},
+        {1034, 17, 1033},
+        {1002, 30, 1053, 11, 1051},
         {-100},
-        {12, 136},
+        {12, 1000},
         {-100},
-        {12, 136, 145},
-        {147, 36, 146, 136, 145},
+        {12, 1000, 1052},
+        {1002, 36, 1004, 1000, 1052},
         {-100},
-        {151, 17, 9, 150, 41, 149, 30, 146, 136, 148},
-        {17, 147, 27},
-        {17, 147, 47},
-        {17, 147, 48},
-        {17, 147, 51},
-        {17, 147, 57},
+        {1058, 17, 9, 1006, 41, 1005, 30, 1004, 1000, 1057},
+        {17, 1002, 27},
+        {17, 1002, 47},
+        {17, 1002, 48},
+        {17, 1002, 51},
+        {17, 1002, 57},
         {17, 59},
         {17, 64},
         {17, 65},
         {17, 66},
         {-100},
-        {28, 136},
-        {67, 146},
+        {28, 1000},
+        {67, 1004},
         {54},
-        {152},
-        {153},
-        {154},
-        {155},
-        {156},
-        {157},
-        {158},
-        {159},
-        {160},
-        {161},
-        {162},
-        {41, 144, 30, 146, 44},
-        {30, 146, 44},
+        {1035},
+        {1036},
+        {1037},
+        {1038},
+        {1039},
+        {1040},
+        {1024},
+        {1025},
+        {1026},
+        {1027},
+        {1028},
+        {41, 1003, 30, 1004, 44},
+        {30, 1004, 44},
         {-100},
-        {46, 136},
+        {46, 1000},
         {-100},
-        {45, 136, 144},
-        {67, 163},
-        {150, 49, 67, 149, 164},
-        {49, 67, 144},
+        {45, 1000, 1003},
+        {67, 1059},
+        {1006, 49, 67, 1005, 1050},
+        {49, 67, 1003},
         {-100},
-        {150, 52, 136, 149, 165},
-        {52, 136, 144},
+        {1006, 52, 1000, 1005, 1049},
+        {52, 1000, 1003},
         {-100},
         {55},
-        {166},
-        {167},
-        {136, 166},
-        {136, 167},
-        {169, 62, 60, 17, 150, 67, 149, 168},
-        {60, 17, 150, 67, 149, 170},
+        {1007},
+        {1008},
+        {1000, 1007},
+        {1000, 1008},
+        {1044, 62, 60, 17, 1006, 67, 1005, 1041},
+        {60, 17, 1006, 67, 1005, 1042},
         {-100},
-        {17, 171},
+        {17, 1043},
         {-100},
-        {173, 17, 150, 67, 149, 172},
-        {176, 150, 67, 149, 175, 17, 174},
-        {179, 17, 150, 67, 178, 67, 149, 136, 177},
+        {1048, 17, 1006, 67, 1005, 1047},
+        {1046, 1006, 67, 1005, 1054, 17, 1045},
+        {1056, 17, 1006, 67, 1029, 67, 1005, 1000, 1055},
         {68, 70},
-        {68, 70, 180},
+        {68, 70, 1009},
         {-100},
         {71, 73},
-        {71, 73, 181},
+        {71, 73, 1010},
         {-100},
-        {75, 182},
+        {75, 1011},
         {75},
         {76, 78},
         {78, 82},
         {-100},
         {79, 88},
-        {78, 183},
-        {78, 184},
+        {78, 1012},
+        {78, 1013},
         {-100},
-        {185},
-        {186},
-        {187},
-        {188},
-        {189},
-        {190},
+        {1014},
+        {1015},
+        {1016},
+        {1017},
+        {1018},
+        {1019},
         {89, 94},
-        {89, 94, 191},
-        {89, 94, 192},
-        {89, 94, 193},
-        {89, 94, 194},
+        {89, 94, 1020},
+        {89, 94, 1021},
+        {89, 94, 1022},
+        {89, 94, 1023},
         {-100},
-        {97, 136},
+        {97, 1000},
         {36},
-        {150, 67, 149},
-        {150, 99, 149},
+        {1006, 67, 1005},
+        {1006, 99, 1005},
         {-100},
-        {101, 136},
+        {101, 1000},
         {-100},
-        {101, 136, 144},
+        {101, 1000, 1003},
         {-100}
     };
 
@@ -257,7 +257,7 @@ public:
             }
         }
 
-        //Si de la nueva prodcuccion insertada el tope es igual al token actual lo scao y voy al siguiente
+        //Si de la nueva prodcuccion insertada el tope es igual al token actual lo saco y voy al siguiente
         if (!pila.empty() && pila.top() == valorToken) {
             //std::cout << "saca3: " << pila.top() << std::endl; //Debug lines
             pila.pop();
@@ -277,141 +277,78 @@ public:
         
     }
 
-    int nuevaColumna(int valToken) {
-        // Map token values (135-194) to column numbers
-        switch (valToken) {
-        case 135: return 30;  // include
-        case 136: return 0;    // id
-        case 137: return 1;    // .
-        case 138: return 31;   // lib
-        case 139: return 32;   // endlib
-        case 140: return 33;   // class
-        case 141: return 34;   // endclass
-        case 142: return 51;   // def
-        case 143: return 53;   // of
-        case 144: return 3;    // ,
-        case 145: return 52;   // const
-        case 146: return 4;    // /= (assuming = is mapped to same as /=)
-        case 147: return 2;    // ;
-        case 148: return 57;   // function
-        case 149: return 5;    // (
-        case 150: return 6;    // )
-        case 151: return 58;   // endfunction
-        case 152: return 35;   // int
-        case 153: return 36;   // float
-        case 154: return 37;   // char
-        case 155: return 38;   // string
-        case 156: return 39;   // bool
-        case 157: return 40;   // void
-        case 158: return 24;   // cteentera
-        case 159: return 25;   // ctereal
-        case 160: return 26;   // ctenotacion
-        case 161: return 27;   // ctecaracter
-        case 162: return 28;   // ctestring
-        case 163: return 59;   // return
-        case 164: return 50;   // write
-        case 165: return 49;   // read
-        case 166: return 7;    // ++
-        case 167: return 8;    // --
-        case 168: return 41;   // if
-        case 169: return 44;   // endif
-        case 170: return 42;   // elseif
-        case 171: return 43;   // else
-        case 172: return 47;   // while
-        case 173: return 48;   // endwhile
-        case 174: return 45;   // do
-        case 175: return 54;   // dowhile
-        case 176: return 46;   // enddo
-        case 177: return 55;   // for
-        case 178: return 29;   // to
-        case 179: return 56;   // endfor
-        case 180: return 9;    // ||
-        case 181: return 10;   // &&
-        case 182: return 11;   // !
-        case 183: return 12;   // +
-        case 184: return 13;   // -
-        case 185: return 14;   // ==
-        case 186: return 15;   // !=
-        case 187: return 16;   // <
-        case 188: return 17;   // <=
-        case 189: return 18;   // >
-        case 190: return 19;   // >=
-        case 191: return 20;   // *
-        case 192: return 21;   // /
-        case 193: return 22;   // %
-        case 194: return 23;   // **
-        default: return 0;     // default to id (0)
-        }
+    int nuevaColumna(int valToken) { 
+        return valToken - 1000;
     }
 
     int identificaToken(std::string lexema, std::string gramema) {
         // 1. Primero verificamos el tipo gramatical (gramema) para constantes
-        if (gramema == "Cteentera") return 158;
-        if (gramema == "Ctereal") return 159;
-        if (gramema == "Ctenotacion") return 160;
-        if (gramema == "Ctecaracter") return 161;
-        if (gramema == "Ctestring") return 162;
+        if (gramema == "Cteentera") return 1024;
+        if (gramema == "Ctereal") return 1025;
+        if (gramema == "Ctenotacion") return 1026;
+        if (gramema == "Ctecaracter") return 1027;
+        if (gramema == "Ctestring") return 1028;
 
         // 2. Luego verificamos palabras reservadas
-        if (lexema == "include") return 135;
-        if (lexema == "lib") return 138;
-        if (lexema == "endlib") return 139;
-        if (lexema == "class") return 140;
-        if (lexema == "endclass") return 141;
-        if (lexema == "def") return 142;
-        if (lexema == "of") return 143;
-        if (lexema == "const") return 145;
-        if (lexema == "function") return 148;
-        if (lexema == "endfunction") return 151;
-        if (lexema == "int") return 152;
-        if (lexema == "float") return 153;
-        if (lexema == "char") return 154;
-        if (lexema == "string") return 155;
-        if (lexema == "bool") return 156;
-        if (lexema == "void") return 157;
-        if (lexema == "return") return 163;
-        if (lexema == "write") return 164;
-        if (lexema == "read") return 165;
-        if (lexema == "if") return 168;
-        if (lexema == "endif") return 169;
-        if (lexema == "elseif") return 170;
-        if (lexema == "else") return 171;
-        if (lexema == "while") return 172;
-        if (lexema == "endwhile") return 173;
-        if (lexema == "do") return 174;
-        if (lexema == "dowhile") return 175;
-        if (lexema == "enddo") return 176;
-        if (lexema == "for") return 177;
-        if (lexema == "to") return 178;
-        if (lexema == "endfor") return 179;
+        if (lexema == "include") return 1030;
+        if (lexema == "lib") return 1031;
+        if (lexema == "endlib") return 1032;
+        if (lexema == "class") return 1033;
+        if (lexema == "endclass") return 1034;
+        if (lexema == "def") return 1051;
+        if (lexema == "of") return 1053;
+        if (lexema == "const") return 1052;
+        if (lexema == "function") return 1057;
+        if (lexema == "endfunction") return 1058;
+        if (lexema == "int") return 1035;
+        if (lexema == "float") return 1036;
+        if (lexema == "char") return 1037;
+        if (lexema == "string") return 1038;
+        if (lexema == "bool") return 1039;
+        if (lexema == "void") return 1040;
+        if (lexema == "return") return 1059;
+        if (lexema == "write") return 1050;
+        if (lexema == "read") return 1049;
+        if (lexema == "if") return 1041;
+        if (lexema == "endif") return 1044;
+        if (lexema == "elseif") return 1042;
+        if (lexema == "else") return 1043;
+        if (lexema == "while") return 1047;
+        if (lexema == "endwhile") return 1048;
+        if (lexema == "do") return 1045;
+        if (lexema == "dowhile") return 1054;
+        if (lexema == "enddo") return 1046;
+        if (lexema == "for") return 1055;
+        if (lexema == "to") return 1029;
+        if (lexema == "endfor") return 1056;
 
         // 3. Verificamos símbolos y operadores
-        if (lexema == ".") return 137;
-        if (lexema == ",") return 144;
-        if (lexema == "=") return 146;
-        if (lexema == ";") return 147;
-        if (lexema == "(") return 149;
-        if (lexema == ")") return 150;
-        if (lexema == "++") return 166;
-        if (lexema == "--") return 167;
-        if (lexema == "||") return 180;
-        if (lexema == "&&") return 181;
-        if (lexema == "!") return 182;
-        if (lexema == "+") return 183;
-        if (lexema == "-") return 184;
-        if (lexema == "==") return 185;
-        if (lexema == "!=") return 186;
-        if (lexema == "<") return 187;
-        if (lexema == "<=") return 188;
-        if (lexema == ">") return 189;
-        if (lexema == ">=") return 190;
-        if (lexema == "*") return 191;
-        if (lexema == "/") return 192;
-        if (lexema == "%") return 193;
-        if (lexema == "**") return 194;
+        if (lexema == ".") return 1001;
+        if (lexema == ",") return 1003;
+        if (lexema == "=") return 1004;
+        if (lexema == ";") return 1002;
+        if (lexema == "(") return 1005;
+        if (lexema == ")") return 1006;
+        if (lexema == "++") return 1007;
+        if (lexema == "--") return 1008;
+        if (lexema == "||") return 1009;
+        if (lexema == "&&") return 1010;
+        if (lexema == "!") return 1011;
+        if (lexema == "+") return 1012;
+        if (lexema == "-") return 1013;
+        if (lexema == "==") return 1014;
+        if (lexema == "!=") return 1015;
+        if (lexema == "<") return 1016;
+        if (lexema == "<=") return 1017;
+        if (lexema == ">") return 1018;
+        if (lexema == ">=") return 1019;
+        if (lexema == "*") return 1020;
+        if (lexema == "/") return 1021;
+        if (lexema == "%") return 1022;
+        if (lexema == "**") return 1023;
 
         
-        return 136;
+        return 1000;
     }
 
     int nuevaFila(int n) {//obtengo la fila de la Matriz predictiva con la relacion que tiene en la Matriz de producciones
@@ -676,7 +613,6 @@ class
         read(N);
         write(N + B);
 endclass
-
 
     */
 

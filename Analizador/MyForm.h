@@ -97,7 +97,7 @@ namespace Analizador {
 			// button2
 			// 
 			this->button2->Location = System::Drawing::Point(10, 622);
-			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(107, 38);
 			this->button2->TabIndex = 1;
@@ -108,7 +108,7 @@ namespace Analizador {
 			// button3
 			// 
 			this->button3->Location = System::Drawing::Point(122, 622);
-			this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button3->Margin = System::Windows::Forms::Padding(2);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(116, 38);
 			this->button3->TabIndex = 2;
@@ -119,7 +119,7 @@ namespace Analizador {
 			// button4
 			// 
 			this->button4->Location = System::Drawing::Point(243, 622);
-			this->button4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button4->Margin = System::Windows::Forms::Padding(2);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(111, 38);
 			this->button4->TabIndex = 3;
@@ -130,7 +130,7 @@ namespace Analizador {
 			// button5
 			// 
 			this->button5->Location = System::Drawing::Point(358, 622);
-			this->button5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button5->Margin = System::Windows::Forms::Padding(2);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(109, 38);
 			this->button5->TabIndex = 4;
@@ -141,7 +141,7 @@ namespace Analizador {
 			// txtAreaCodigo
 			// 
 			this->txtAreaCodigo->Location = System::Drawing::Point(9, 10);
-			this->txtAreaCodigo->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->txtAreaCodigo->Margin = System::Windows::Forms::Padding(2);
 			this->txtAreaCodigo->Name = L"txtAreaCodigo";
 			this->txtAreaCodigo->Size = System::Drawing::Size(458, 608);
 			this->txtAreaCodigo->TabIndex = 5;
@@ -151,7 +151,7 @@ namespace Analizador {
 			// txtSintaxis
 			// 
 			this->txtSintaxis->Location = System::Drawing::Point(481, 19);
-			this->txtSintaxis->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->txtSintaxis->Margin = System::Windows::Forms::Padding(2);
 			this->txtSintaxis->Name = L"txtSintaxis";
 			this->txtSintaxis->Size = System::Drawing::Size(583, 63);
 			this->txtSintaxis->TabIndex = 6;
@@ -160,20 +160,21 @@ namespace Analizador {
 			// txtToken
 			// 
 			this->txtToken->Location = System::Drawing::Point(484, 99);
-			this->txtToken->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->txtToken->Margin = System::Windows::Forms::Padding(2);
 			this->txtToken->Name = L"txtToken";
-			this->txtToken->Size = System::Drawing::Size(574, 504);
+			this->txtToken->Size = System::Drawing::Size(574, 173);
 			this->txtToken->TabIndex = 7;
 			this->txtToken->Text = L"";
 			// 
 			// txtError
 			// 
-			this->txtError->Location = System::Drawing::Point(481, 622);
-			this->txtError->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->txtError->Location = System::Drawing::Point(481, 605);
+			this->txtError->Margin = System::Windows::Forms::Padding(2);
 			this->txtError->Name = L"txtError";
-			this->txtError->Size = System::Drawing::Size(577, 38);
+			this->txtError->Size = System::Drawing::Size(577, 55);
 			this->txtError->TabIndex = 8;
 			this->txtError->Text = L"";
+			this->txtError->TextChanged += gcnew System::EventHandler(this, &MyForm::txtError_TextChanged);
 			// 
 			// label1
 			// 
@@ -199,7 +200,7 @@ namespace Analizador {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(481, 605);
+			this->label3->Location = System::Drawing::Point(481, 590);
 			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(34, 13);
@@ -223,7 +224,7 @@ namespace Analizador {
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
@@ -308,6 +309,8 @@ private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void txtError_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

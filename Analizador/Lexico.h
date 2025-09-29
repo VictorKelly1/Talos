@@ -52,7 +52,7 @@ public:
         "function", "endfunction"
     };
 
-    //para mandar el token al an alizador sintactico 1x1///////////////////////////////////////////////////////////////
+    //Para mandar el token al an alizador sintactico 1x1///////////////////////////////////////////////////////////////
 
     char* entrada;
     char* actual;
@@ -113,7 +113,7 @@ public:
     }
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    void analizar() { //Funcion de complejidad lineal: O(n)?
+    void analizar() { //Complejidad lineal: O(n)?
         //Inicializo 
         int caracter = 0;
         int estado = 0;
