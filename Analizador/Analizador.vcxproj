@@ -116,12 +116,14 @@
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Semantico.h" />
     <ClInclude Include="Sintactico.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lexico.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="Semantico.cpp" />
     <ClCompile Include="Sintactico.cpp" />
   </ItemGroup>
   <ItemGroup>

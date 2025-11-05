@@ -27,6 +27,9 @@
     <ClInclude Include="Sintactico.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Semantico.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lexico.cpp">
@@ -39,6 +42,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="Sintactico.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Semantico.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

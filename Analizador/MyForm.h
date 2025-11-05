@@ -66,13 +66,20 @@ namespace Analizador {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip1;
+	private: System::Windows::Forms::RichTextBox^ txtSemantica;
+
+	private: System::ComponentModel::IContainer^ components;
+
+
 	protected:
 
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -81,6 +88,7 @@ namespace Analizador {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
@@ -92,6 +100,9 @@ namespace Analizador {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
+			this->txtSemantica = (gcnew System::Windows::Forms::RichTextBox());
 			this->SuspendLayout();
 			// 
 			// button2
@@ -153,13 +164,13 @@ namespace Analizador {
 			this->txtSintaxis->Location = System::Drawing::Point(481, 19);
 			this->txtSintaxis->Margin = System::Windows::Forms::Padding(2);
 			this->txtSintaxis->Name = L"txtSintaxis";
-			this->txtSintaxis->Size = System::Drawing::Size(583, 63);
+			this->txtSintaxis->Size = System::Drawing::Size(574, 174);
 			this->txtSintaxis->TabIndex = 6;
 			this->txtSintaxis->Text = L"";
 			// 
 			// txtToken
 			// 
-			this->txtToken->Location = System::Drawing::Point(484, 99);
+			this->txtToken->Location = System::Drawing::Point(481, 210);
 			this->txtToken->Margin = System::Windows::Forms::Padding(2);
 			this->txtToken->Name = L"txtToken";
 			this->txtToken->Size = System::Drawing::Size(574, 173);
@@ -168,10 +179,10 @@ namespace Analizador {
 			// 
 			// txtError
 			// 
-			this->txtError->Location = System::Drawing::Point(481, 605);
+			this->txtError->Location = System::Drawing::Point(481, 590);
 			this->txtError->Margin = System::Windows::Forms::Padding(2);
 			this->txtError->Name = L"txtError";
-			this->txtError->Size = System::Drawing::Size(577, 55);
+			this->txtError->Size = System::Drawing::Size(577, 70);
 			this->txtError->TabIndex = 8;
 			this->txtError->Text = L"";
 			this->txtError->TextChanged += gcnew System::EventHandler(this, &MyForm::txtError_TextChanged);
@@ -190,7 +201,7 @@ namespace Analizador {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(481, 84);
+			this->label2->Location = System::Drawing::Point(481, 195);
 			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(43, 13);
@@ -200,19 +211,46 @@ namespace Analizador {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(481, 590);
+			this->label3->Location = System::Drawing::Point(478, 575);
 			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(34, 13);
+			this->label3->Size = System::Drawing::Size(40, 13);
 			this->label3->TabIndex = 11;
-			this->label3->Text = L"Errors";
+			this->label3->Text = L"Errores";
 			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(478, 385);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(57, 13);
+			this->label4->TabIndex = 12;
+			this->label4->Text = L"Semantica";
+			this->label4->Click += gcnew System::EventHandler(this, &MyForm::label4_Click);
+			// 
+			// contextMenuStrip1
+			// 
+			this->contextMenuStrip1->Name = L"contextMenuStrip1";
+			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
+			// 
+			// txtSemantica
+			// 
+			this->txtSemantica->Location = System::Drawing::Point(481, 400);
+			this->txtSemantica->Margin = System::Windows::Forms::Padding(2);
+			this->txtSemantica->Name = L"txtSemantica";
+			this->txtSemantica->Size = System::Drawing::Size(574, 173);
+			this->txtSemantica->TabIndex = 14;
+			this->txtSemantica->Text = L"";
+			this->txtSemantica->TextChanged += gcnew System::EventHandler(this, &MyForm::richTextBox1_TextChanged_1);
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1069, 671);
+			this->Controls->Add(this->txtSemantica);
+			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
@@ -298,6 +336,24 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 
 	txtToken->Text = gcnew System::String(stream.str().c_str());
 	txtError->Text = gcnew System::String(errorStream.str().c_str());
+
+	// NUEVO: Mostrar contenido semántico
+	txtSemantica->Clear();
+	txtSemantica->AppendText("Declaraciones:\n");
+
+	for (const auto& d : Semantico::declaraciones)
+	{
+		std::string linea = "[Declaración añadida] Variable: " + d.first + " | Tipo: " + d.second;
+		txtSemantica->AppendText(gcnew System::String(linea.c_str()) + "\n");
+	}
+
+	txtSemantica->AppendText("\nErrores semánticos:\n");
+
+	for (const auto& e : Semantico::erroresSemanticos)
+	{
+		std::string linea = "[Error semántico] " + e;
+		txtSemantica->AppendText(gcnew System::String(linea.c_str()) + "\n");
+	}
 }
 
 
@@ -311,6 +367,10 @@ private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) 
 private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void txtError_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void richTextBox1_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
