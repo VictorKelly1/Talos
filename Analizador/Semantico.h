@@ -64,6 +64,7 @@ public:
         else
         {
             erroresSemanticos.push_back("Variable no declarada: " + Lexema);
+            declarar(Lexema, Gramema, 2036);
             pila.push('R');
         }
     }
