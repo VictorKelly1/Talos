@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\victo\\source\\repos\\Talos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|solutionrelative:Analizador\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|solutionrelative:Analizador\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\GeneracionIR.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|solutionrelative:Analizador\\GeneracionIR.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\Semantico.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|solutionrelative:Analizador\\Semantico.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,20 +23,8 @@
       "RelativeMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|solutionrelative:Analizador\\Sintactico.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
-      "RelativeMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|solutionrelative:Analizador\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\Semantico.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|solutionrelative:Analizador\\Semantico.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\Lexico.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|solutionrelative:Analizador\\Lexico.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|solutionrelative:Analizador\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CDDD347-14AF-2CA5-472C-DF2393C0C672}|Analizador\\Analizador.vcxproj|C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\main.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -38,43 +38,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Lexico.h",
               "DocumentMoniker": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\Lexico.h",
               "RelativeDocumentMoniker": "Analizador\\Lexico.h",
               "ToolTip": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\Lexico.h",
               "RelativeToolTip": "Analizador\\Lexico.h",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAEIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAABwAAACoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-14T20:03:33.058Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Sintactico.h",
               "DocumentMoniker": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\Sintactico.h",
               "RelativeDocumentMoniker": "Analizador\\Sintactico.h",
-              "ToolTip": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\Sintactico.h",
-              "RelativeToolTip": "Analizador\\Sintactico.h",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAiwMoAAABLAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\Sintactico.h*",
+              "RelativeToolTip": "Analizador\\Sintactico.h*",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAAALEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-14T22:32:42.753Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Semantico.h",
               "DocumentMoniker": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\Semantico.h",
               "RelativeDocumentMoniker": "Analizador\\Semantico.h",
               "ToolTip": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\Semantico.h",
               "RelativeToolTip": "Analizador\\Semantico.h",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-10-13T22:41:48.582Z",
               "IsPinned": true,
@@ -82,38 +84,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Semantico.cpp",
-              "DocumentMoniker": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\Semantico.cpp",
-              "RelativeDocumentMoniker": "Analizador\\Semantico.cpp",
-              "ToolTip": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\Semantico.cpp",
-              "RelativeToolTip": "Analizador\\Semantico.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-28T02:47:11.003Z"
+              "DocumentIndex": 2,
+              "Title": "GeneracionIR.h",
+              "DocumentMoniker": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\GeneracionIR.h",
+              "RelativeDocumentMoniker": "Analizador\\GeneracionIR.h",
+              "ToolTip": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\GeneracionIR.h*",
+              "RelativeToolTip": "Analizador\\GeneracionIR.h*",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAwwH4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-19T23:07:26.924Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "MyForm.h",
               "DocumentMoniker": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\MyForm.h",
               "RelativeDocumentMoniker": "Analizador\\MyForm.h",
-              "ToolTip": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\MyForm.h",
-              "RelativeToolTip": "Analizador\\MyForm.h",
-              "ViewState": "AgIAADkBAAAAAAAAAAAcwF0BAAAdAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\MyForm.h*",
+              "RelativeToolTip": "Analizador\\MyForm.h*",
+              "ViewState": "AgIAAHEBAAAAAAAAAAAgwIcBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-14T22:22:00.342Z"
+              "WhenOpened": "2025-04-14T22:22:00.342Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MyForm.h [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\MyForm.h",
               "RelativeDocumentMoniker": "Analizador\\MyForm.h",
-              "ToolTip": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\MyForm.h [Dise\u00F1o]",
-              "RelativeToolTip": "Analizador\\MyForm.h [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\victo\\source\\repos\\Talos\\Analizador\\MyForm.h [Dise\u00F1o]*",
+              "RelativeToolTip": "Analizador\\MyForm.h [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-14T20:20:29.862Z"
+              "WhenOpened": "2025-04-14T20:20:29.862Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
@@ -125,7 +131,8 @@
               "RelativeToolTip": "Analizador\\main.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-14T21:04:08.813Z"
+              "WhenOpened": "2025-04-14T21:04:08.813Z",
+              "EditorCaption": ""
             }
           ]
         }

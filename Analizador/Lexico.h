@@ -46,10 +46,10 @@ public:
     };
 
     const std::vector<std::string> palabrasReservadas = {
-        "include", "library", "endlib", "class", "endclass", "int", "float", "char", "string",
-        "if", "elseif", "else", "endif", "do", "enddo", "while", "endwhile",
+        "include", "lib", "endlib", "class", "endclass", "int", "float", "char", "string",
+        "bool", "void", "if", "elseif", "else", "endif", "do", "enddo", "while", "endwhile",
         "read", "write", "def", "const", "of", "dowhile", "for", "endfor",
-        "function", "endfunction"
+        "function", "endfunction", "return"
     };
 
     //Para mandar el token al an alizador sintactico 1x1///////////////////////////////////////////////////////////////
@@ -142,9 +142,9 @@ public:
             //analiza si el estado es deterministico sino retgresa el error, en caso de ser estado no deteministico salta
             if (estado >= 100 && estado <=199) {
                 /*
-                si el estado esta entre este rango quiere decir que el caracter anterior no es deterministico, porque 
-                la unica via a estos estados es pasar por la fila 0 y no salta una pocision atras ya que la manera en determino 
-                un lexema es el conjunto de caracteres - 1 ya que para determinar un lexema es a partrir del caracter que 
+                si el estado esta entre este rango, quiere decir que el caracter anterior no es deterministico, porque 
+                la unica via a estos estados es pasar por la fila 0 y no salta una pocision atras, ya que la manera de determinar 
+                un lexema es el conjunto de caracteres - 1, porque para determinar un lexema, es a partrir del caracter que 
                 sigue de el.
                 */
                 if (estado <= 109 || estado > 134 ) {
@@ -188,7 +188,7 @@ public:
 
     int relacionar(char c, int estado) {
         //
-        if (c >= 'a' && c <= 'z' && estado != 5) {  //minusculas
+        if (c >= 'a' && c <= 'z' && estado != 6) {  //minusculas
             return 0;
         }else if (c >= 'A' && c <= 'Z' && estado != 5) {  // mayusculas
             return 1;

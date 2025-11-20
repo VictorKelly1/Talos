@@ -111,6 +111,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="GeneracionIR.h" />
     <ClInclude Include="Lexico.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="MyForm.h">
@@ -120,6 +121,7 @@
     <ClInclude Include="Sintactico.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GeneracionIR.cpp" />
     <ClCompile Include="Lexico.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyForm.cpp" />

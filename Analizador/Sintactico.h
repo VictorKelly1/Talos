@@ -175,16 +175,22 @@ public:
         {101, 1000, 2001, 1003}, //accion
         {-100}
     };
-    
+
+    //Pilas para generacion de IR
+    std::stack<int> pilaSaltos;
+    std::stack<std::string> pilaOperadoresIR;
+    std::stack<std::string> pilaOperandos;
+
     //Pila para analizis sintactico
     std::stack<int> pila;
+
     //Pila para analizis semantico
     std::stack<char> pilaTipos;
     std::stack<std::string> pilaOperadores;
     //pilas auxiliares 
     std::stack<std::string> pilaTemporalDeclaraciones;
     std::stack<int> pilaTemporalAcciones;
-    //
+    
     int pilaAnterior = 0;
     int valorMPAnterior = 0;
     int valorMP = 0;

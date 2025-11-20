@@ -47,10 +47,11 @@ public:
         declaraciones.push_back({ Lexema, string(1, tipo) });
     }
 
+    //accion uno
     static void insertarTipo(string& Lexema, string& Gramema, stack<char>& pila)   //accion uno
 
     {
-        cout << "entra 1: " << endl;
+        //cout << "entra 1: " << endl;
         auto it = find_if(declaraciones.begin(), declaraciones.end(),
             [&Lexema](const pair<string, string>& p) { return p.first == Lexema; });
 
@@ -58,7 +59,7 @@ public:
         {
             
             char tipo = it->second[0];  // El tipo esta en el segundo campo (como string)
-            cout << "inserta: " << tipo << endl;
+            //cout << "inserta: " << tipo << endl;
             pila.push(tipo);
         }
         else
@@ -72,14 +73,14 @@ public:
     //accion dos
     static void insertarOperador(string& Lexema, string& Gramema, stack<string>& pila)
     {
-        cout << "entra en 2: " << Lexema << endl;
+        //cout << "entra en 2: " << Lexema << endl;
         if (Lexema == "=")
         {
-            cout << "INSERTA: " << Lexema << endl;
+            //cout << "INSERTA: " << Lexema << endl;
             pila.push(Lexema); 
         }
         else {
-            cout << "entra 5 pero no hace nada: " << endl;
+            //cout << "entra 5 pero no hace nada: " << endl;
         }
         
     }
@@ -95,7 +96,7 @@ public:
 
             if (op == "*" || op == "/" || op == "%" || op == "&&")
             {
-                cout << "entra 3: "  << endl;
+                //cout << "entra 3: "  << endl;
                 char tipo2 = pilaTipos.top(); pilaTipos.pop();
                 char tipo1 = pilaTipos.top(); pilaTipos.pop();
 
@@ -104,7 +105,7 @@ public:
 
                 if (resultado != 'X')
                 { 
-                    cout << "inserta: " << resultado << endl; 
+                    //cout << "inserta: " << resultado << endl; 
                     pilaTipos.push(resultado);
                     pilaOperadores.pop();
                 }
@@ -116,13 +117,13 @@ public:
                         std::string(1, tipo2) + ") con operador " +
                         op
                     );
-                    cout << "inserta: " << "R" << endl;
+                    //cout << "inserta: " << "R" << endl;
                     pilaTipos.push('R');
                     pilaOperadores.pop();
                 }
             }
             else {
-                cout << "entra 3 pero no hace nada: " << endl;
+                // << "entra 3 pero no hace nada: " << endl;
             }
             // Si el operador no es *, / o %, no hace nada
         }
@@ -136,7 +137,7 @@ public:
 
             if (op == "+" || op == "-" || op == "||")
             {
-                cout << "entra 4: " << endl;
+                //cout << "entra 4: " << endl;
                 char tipo2 = pilaTipos.top(); pilaTipos.pop();
                 char tipo1 = pilaTipos.top(); pilaTipos.pop();
 
@@ -144,7 +145,7 @@ public:
 
                 if (resultado != 'X')
                 {
-                    cout << "inserta: " << resultado << endl; 
+                    //cout << "inserta: " << resultado << endl; 
                     pilaTipos.push(resultado);
                     pilaOperadores.pop();
                 }
@@ -156,12 +157,12 @@ public:
                         std::string(1, tipo2) + ") con operador " +
                         op
                     );
-                    cout << "inserta: " << "R" << endl;
+                    //cout << "inserta: " << "R" << endl;
                     pilaTipos.push('R');
                     pilaOperadores.pop();
                 }
             }else {
-                cout << "entra 4 pero no hace nada: " << endl;
+                //cout << "entra 4 pero no hace nada: " << endl;
             }
             // Si el operador no es +, - ni ||, no hace nada
         }
@@ -169,17 +170,17 @@ public:
 
     static void accionCinco(string& Lexema, string& Gramema, stack<string>& pilaOperadores)
     {
-        cout << "entra en 6: " << Lexema << endl;
+        //cout << "entra en 6: " << Lexema << endl;
         if (Lexema == "+" || Lexema == "-" ||
             Lexema == "*" || Lexema == "**" ||
             Lexema == "%" || Lexema == "/" ||
             Lexema == "||" || Lexema == "&&")
         {
-            cout << "INSERTA: "<< Lexema << endl; 
+            //cout << "INSERTA: "<< Lexema << endl; 
             pilaOperadores.push(Lexema);
         }
         else {
-            cout << "entra 5 pero no hace nada: " << endl;
+            //cout << "entra 5 pero no hace nada: " << endl;
         }
     }
 
@@ -203,7 +204,7 @@ public:
         {
            
             string op = pilaOperadores.top();
-            cout << "el tope: " << op << endl; 
+            //cout << "el tope: " << op << endl; 
 
             // Verificar si el operador es de asignación
             if (op == "=")
@@ -289,10 +290,6 @@ public:
 
         return matrizCompatibilidad[fila][columna];
     }
-};
+}; 
 
-
-/*
-- orden de los errores 
-*/
 

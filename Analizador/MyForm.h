@@ -69,6 +69,9 @@ namespace Analizador {
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip1;
 	private: System::Windows::Forms::RichTextBox^ txtSemantica;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
 
 	private: System::ComponentModel::IContainer^ components;
 
@@ -103,6 +106,10 @@ namespace Analizador {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->txtSemantica = (gcnew System::Windows::Forms::RichTextBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button2
@@ -112,7 +119,7 @@ namespace Analizador {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(107, 38);
 			this->button2->TabIndex = 1;
-			this->button2->Text = L"Limpiar";
+			this->button2->Text = L"Clean";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
@@ -123,7 +130,7 @@ namespace Analizador {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(116, 38);
 			this->button3->TabIndex = 2;
-			this->button3->Text = L"Guardar";
+			this->button3->Text = L"Save";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
@@ -134,7 +141,7 @@ namespace Analizador {
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(111, 38);
 			this->button4->TabIndex = 3;
-			this->button4->Text = L"Analizar";
+			this->button4->Text = L"Analyze";
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
@@ -145,16 +152,16 @@ namespace Analizador {
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(109, 38);
 			this->button5->TabIndex = 4;
-			this->button5->Text = L"Salir";
+			this->button5->Text = L"Close";
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
 			// txtAreaCodigo
 			// 
-			this->txtAreaCodigo->Location = System::Drawing::Point(9, 10);
+			this->txtAreaCodigo->Location = System::Drawing::Point(9, 19);
 			this->txtAreaCodigo->Margin = System::Windows::Forms::Padding(2);
 			this->txtAreaCodigo->Name = L"txtAreaCodigo";
-			this->txtAreaCodigo->Size = System::Drawing::Size(458, 608);
+			this->txtAreaCodigo->Size = System::Drawing::Size(458, 599);
 			this->txtAreaCodigo->TabIndex = 5;
 			this->txtAreaCodigo->Text = L"";
 			this->txtAreaCodigo->TextChanged += gcnew System::EventHandler(this, &MyForm::richTextBox1_TextChanged);
@@ -164,25 +171,25 @@ namespace Analizador {
 			this->txtSintaxis->Location = System::Drawing::Point(481, 19);
 			this->txtSintaxis->Margin = System::Windows::Forms::Padding(2);
 			this->txtSintaxis->Name = L"txtSintaxis";
-			this->txtSintaxis->Size = System::Drawing::Size(574, 174);
+			this->txtSintaxis->Size = System::Drawing::Size(574, 32);
 			this->txtSintaxis->TabIndex = 6;
 			this->txtSintaxis->Text = L"";
 			// 
 			// txtToken
 			// 
-			this->txtToken->Location = System::Drawing::Point(481, 210);
+			this->txtToken->Location = System::Drawing::Point(481, 68);
 			this->txtToken->Margin = System::Windows::Forms::Padding(2);
 			this->txtToken->Name = L"txtToken";
-			this->txtToken->Size = System::Drawing::Size(574, 173);
+			this->txtToken->Size = System::Drawing::Size(574, 76);
 			this->txtToken->TabIndex = 7;
 			this->txtToken->Text = L"";
 			// 
 			// txtError
 			// 
-			this->txtError->Location = System::Drawing::Point(481, 590);
+			this->txtError->Location = System::Drawing::Point(481, 622);
 			this->txtError->Margin = System::Windows::Forms::Padding(2);
 			this->txtError->Name = L"txtError";
-			this->txtError->Size = System::Drawing::Size(577, 70);
+			this->txtError->Size = System::Drawing::Size(574, 38);
 			this->txtError->TabIndex = 8;
 			this->txtError->Text = L"";
 			this->txtError->TextChanged += gcnew System::EventHandler(this, &MyForm::txtError_TextChanged);
@@ -193,15 +200,15 @@ namespace Analizador {
 			this->label1->Location = System::Drawing::Point(481, 3);
 			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(43, 13);
+			this->label1->Size = System::Drawing::Size(36, 13);
 			this->label1->TabIndex = 9;
-			this->label1->Text = L"Sintaxis";
+			this->label1->Text = L"Sintax";
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(481, 195);
+			this->label2->Location = System::Drawing::Point(481, 53);
 			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(43, 13);
@@ -211,22 +218,22 @@ namespace Analizador {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(478, 575);
+			this->label3->Location = System::Drawing::Point(481, 605);
 			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(40, 13);
+			this->label3->Size = System::Drawing::Size(34, 13);
 			this->label3->TabIndex = 11;
-			this->label3->Text = L"Errores";
+			this->label3->Text = L"Errors";
 			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(478, 385);
+			this->label4->Location = System::Drawing::Point(481, 146);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(57, 13);
+			this->label4->Size = System::Drawing::Size(51, 13);
 			this->label4->TabIndex = 12;
-			this->label4->Text = L"Semantica";
+			this->label4->Text = L"Semantic";
 			this->label4->Click += gcnew System::EventHandler(this, &MyForm::label4_Click);
 			// 
 			// contextMenuStrip1
@@ -236,19 +243,48 @@ namespace Analizador {
 			// 
 			// txtSemantica
 			// 
-			this->txtSemantica->Location = System::Drawing::Point(481, 400);
+			this->txtSemantica->Location = System::Drawing::Point(481, 161);
 			this->txtSemantica->Margin = System::Windows::Forms::Padding(2);
 			this->txtSemantica->Name = L"txtSemantica";
-			this->txtSemantica->Size = System::Drawing::Size(574, 173);
+			this->txtSemantica->Size = System::Drawing::Size(574, 81);
 			this->txtSemantica->TabIndex = 14;
 			this->txtSemantica->Text = L"";
 			this->txtSemantica->TextChanged += gcnew System::EventHandler(this, &MyForm::richTextBox1_TextChanged_1);
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(478, 244);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(140, 13);
+			this->label5->TabIndex = 15;
+			this->label5->Text = L"Intermediate Representation";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(7, 4);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(69, 13);
+			this->label6->TabIndex = 16;
+			this->label6->Text = L"Source Code";
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(481, 260);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->Size = System::Drawing::Size(576, 342);
+			this->dataGridView1->TabIndex = 17;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1069, 671);
+			this->Controls->Add(this->dataGridView1);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
 			this->Controls->Add(this->txtSemantica);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
@@ -266,6 +302,7 @@ namespace Analizador {
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
