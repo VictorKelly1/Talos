@@ -16,6 +16,9 @@ struct Token { //para mandar un token a otra clase
 class Lexico {
 
 public:
+
+    ~Lexico() {}  
+
     const int matriz[26][31] = {
         {  1,   2,   3,   2, 500, 500,  20,  19,  14,  15,  17, 127,  13,  12,   9,  11,  10, 121, 122, 119, 120, 124, 123, 134, 128,  21,  25, 506,   0,   0,   0}, //0
         {  1,   2,   2,   2, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100}, //1
@@ -117,12 +120,12 @@ public:
         //Inicializo 
         int caracter = 0;
         int estado = 0;
-        int fila = 0;
+        int fila = 0;               
         int columna = 0;
 
         char* entrada = Contenido();
-        char* inicio = entrada;
-        char* actual = entrada;
+        char* inicio = entrada;       
+        char* actual = entrada; // Hola
         
         //do while, recorro cadena 1x1
         do {
@@ -476,11 +479,15 @@ public:
 
         return entrada;
     }
+
+    
     
 };
 
 
-
+/*
+'<' y '<' no hace el retroceso
+*/
 
 
 

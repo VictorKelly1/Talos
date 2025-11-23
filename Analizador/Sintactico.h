@@ -1,9 +1,13 @@
-#include <vector>
-#include <string>
+
 #include <unordered_map>
 #include <cstdlib> 
+
 #include "Lexico.h"
 #include "Semantico.h"
+#include "GeneracionIR.h"
+
+#include <vector>
+#include <string>
 #include <stack>
 #include <unordered_map>
 
@@ -16,6 +20,8 @@ public:
     Sintactico() {
         pila.push(1);
     }
+
+    ~Sintactico() {}   
 
     const int matrizPredictiva[47][61] = {
         //   0,     1,     2,     3,     4,     5,     6,     7,     8,     9,     10,     11,     12,    13,    14,    15,    16,    17,    18,    19,    20,    21,    22,    23,        24,      25,      26,       27,       28,    29,      30,    31,     32,    33,      34,    35,    36,   37,     38,     39,    40,   41,     42,   43,    44,   45,    46,     47,      48,   49,    50,   51,    52,   53,     54,   55,     56,    57,      58,      59,   60}
@@ -69,10 +75,10 @@ public:
         {  646,   646,   646,   101,   646,   646,   102,   646,   646,   646,    646,    646,    646,   646,   646,   646,   646,   646,   646,   646,   646,   646,   646,   646,       646,     646,     646,      646,      646,   646,     646,   646,    646,   646,     646,   646,   646,  646,    646,    646,   646,  646,    646,  646,   646,  646,   646,    646,     646,  646,   646,  646,   646,  646,    646,  646,    646,   646,     646,     646,  646}, //46
 
     };
-
+    //menores a 999 producciones,1000 tokens, 2000 acciones semanticas, 3000 acciones IR
     std::vector<std::vector<int>> matrizProducciones = {
         {0},
-        {8, 4, 2}, 
+        {8, 4, 2},                                        
         {2, 1002, 1031, 1001, 1000, 1030},
         {-100},             
         {4, 9},  
@@ -82,7 +88,7 @@ public:
         {1034, 17, 1033},
         {1002, 30, 1053, 11, 1051},
         {-100},
-        {12, 1000, 2000},    //accion 
+        {12, 1000, 2000},    //accion                         //10
         {-100},
         {12, 1000, 1052},
         {1002, 36, 1004, 1000, 2000, 1052},  //accion
@@ -92,26 +98,26 @@ public:
         {17, 1002, 47},
         {17, 1002, 48},
         {17, 1002, 51},
-        {17, 1002, 57},
+        {17, 1002, 57},                                       //20
         {17, 59},
         {17, 64},
         {17, 65},
         {17, 66},
         {-100},
-        {28, 1000, 2001}, //accion 
-        {2009, 67, 1004, 2002}, //accion 
+        {28, 1000, 2001, 3001}, //accion //generacion 
+        {2009, 3004, 67, 1004, 2002, 3002}, //accion //generacion 
         {54},
         {1035, 2035},  //accion
-        {1036, 2036},  //accion
+        {1036, 2036},  //accion                               //30
         {1037, 2037},  //accion
         {1038, 2038},  //accion
         {1039, 2039},  //accion
-        {1040, 2040},  //accion
-        {1024, 2035},
-        {1025, 2036},
-        {1026, 2036},
-        {1027, 2037},
-        {1028, 2038},
+        {1040, 2040},  //accion 
+        {1024, 2035, 3001},  //accion //Generacion
+        {1025, 2036, 3001},  //accion //Generacion
+        {1026, 2036, 3001},  //accion //Generacion
+        {1027, 2037, 3001},  //accion //Generacion
+        {1028, 2038, 3001},  //accion //Generacion            //40
         {41, 1003, 30, 1004, 44},
         {30, 1004, 44},
         {-100},
@@ -121,7 +127,7 @@ public:
         {67, 1059},
         {1006, 49, 67, 1005, 1050},
         {49, 67, 1003},
-        {-100},
+        {-100},                                               //50
         {1006, 52, 1000, 1005, 1049},
         {52, 1000, 1003},
         {-100},
@@ -130,18 +136,18 @@ public:
         {1008},
         {1000, 1007},
         {1000, 1008},
-        {1044, 62, 60, 17, 1006, 67, 1005, 1041},
-        {60, 17, 1006, 67, 1005, 1042},
+        {3010, 1044, 3009, 62, 60, 17, 3007, 1006, 3006, 67, 1005, 3005, 1041}, //Generacion
+        {60, 17, 1006, 67, 1005, 1042},                       //60
         {-100},
-        {17, 1043},
+        {17, 3008, 1043}, //Generacion 
         {-100},
-        {1048, 17, 1006, 67, 1005, 1047},
-        {1046, 1006, 67, 1005, 1054, 17, 1045},
-        {1056, 17, 1006, 67, 1029, 67, 1005, 1000, 1055},
+        {3016, 1048, 17, 3015, 1006, 3014, 67, 1005, 3013, 1047},  //Generacion  
+        {3012, 1046, 1006, 67, 1005, 1054, 17, 3011, 1045},  //Generacion
+        {1056, 3022, 17, 3021, 1006, 3020, 67, 3013, 1029, 3019, 67, 1004, 1000, 3018, 1005, 1055}, //Generacion                                 {1056, 17, 1006, 67, 1029, 67, 1005, 1000, 1055}
         {68, 70},
         {68, 70, 1009, 2005}, //accion
         {-100},               
-        {71, 73},
+        {71, 73},                                              //70
         {71, 73, 1010, 2005}, //accion
         {-100},
         {75, 1011},
@@ -149,37 +155,37 @@ public:
         {76, 78},
         {78, 82},
         {-100},
-        {79, 2004, 88},   //accion
-        {78, 1012, 2005}, //accion
-        {78, 1013, 2005}, //accion
+        {79, 2004, 3017, 88}, //accion //Generacion
+        {78, 1012, 2005, 3002}, //accion //Generacion
+        {78, 1013, 2005, 3002}, //accion //Generacion           //80   
         {-100},
-        {1014},
-        {1015},
-        {1016},
-        {1017},
-        {1018},
-        {1019},
-        {89, 2003, 94}, //accion
-        {88, 94, 1020, 2005}, //accion
-        {88, 94, 1021, 2005}, //accion
-        {88, 94, 1022, 2005}, //accion
-        {88, 94, 1023, 2005}, //accion
+        {1014, 3002}, //Generacion
+        {1015, 3002}, //Generacion
+        {1016, 3002}, //Generacion
+        {1017, 3002}, //Generacion
+        {1018, 3002}, //Generacion
+        {1019, 3002}, //Generacion
+        {89, 2003, 3003, 94},  //accion //Generacion
+        {88, 94, 1020, 2005, 3002}, //accion //Generacion
+        {88, 94, 1021, 2005, 3002}, //accion //Generacion        //90       
+        {88, 94, 1022, 2005, 3002}, //accion //Generacion
+        {88, 94, 1023, 2005, 3002}, //accion //Generacion
         {-100},
-        {97, 1000, 2001}, //accion 
+        {97, 1000, 2001, 3001}, //accion //Generacion
         {36},
         {1006, 2008, 67, 1005, 2007}, //accion
         {1006, 99, 1005},
         {-100},
-        {101, 1000, 2001}, //accion
+        {101, 1000, 2001, 3001}, //accion //Generacion
         {-100},
-        {101, 1000, 2001, 1003}, //accion
+        {101, 1000, 2001, 3001, 1003}, //accion //Generacion
         {-100}
     };
 
     //Pilas para generacion de IR
     std::stack<int> pilaSaltos;
     std::stack<std::string> pilaOperadoresIR;
-    std::stack<std::string> pilaOperandos;
+    std::stack<std::string> pilaOperandosIR;
 
     //Pila para analizis sintactico
     std::stack<int> pila;
@@ -200,28 +206,85 @@ public:
 
     Lexico lexico;
     Token token = lexico.siguienteToken();
-    //
-
+    // 
+    //Acciones semanticas para validacion de tipos--------------------------------------------------------------
     void accionesSemanticas(std::string lexema, std::string gramema, int valorAccion, int valorTipo, 
         std::stack<char>& pilaTipos, std::stack<std::string>& pilaOperadores)
     {
         switch (valorAccion) {
-        case 2000: Semantico::declarar(lexema, gramema, valorTipo); break; 
-        case 2001: Semantico::insertarTipo(lexema, gramema, pilaTipos); break; 
-        case 2002: Semantico::insertarOperador(lexema, gramema, pilaOperadores); break; 
-        case 2003: Semantico::accionTres(pilaTipos, pilaOperadores); break; 
-        case 2004: Semantico::accionCuatro(pilaTipos, pilaOperadores); break;
-        case 2005: Semantico::accionCinco(lexema, gramema, pilaOperadores); break;
-        case 2006: Semantico::accionCinco(lexema, gramema, pilaOperadores); break; 
-        case 2007: Semantico::accionSiete(pilaOperadores); break;
-        case 2008: Semantico::accionOcho(pilaOperadores); break;
-        case 2009: Semantico::accionNueve(pilaTipos, pilaOperadores); break;
+            case 2000: Semantico::declarar(lexema, gramema, valorTipo); break; 
+            case 2001: Semantico::insertarTipo(lexema, gramema, pilaTipos); break; 
+            case 2002: Semantico::insertarOperador(lexema, gramema, pilaOperadores); break; 
+            case 2003: Semantico::accionTres(pilaTipos, pilaOperadores); break; 
+            case 2004: Semantico::accionCuatro(pilaTipos, pilaOperadores); break;
+            case 2005: Semantico::accionCinco(lexema, gramema, pilaOperadores); break;
+            case 2006: Semantico::accionCinco(lexema, gramema, pilaOperadores); break; 
+            case 2007: Semantico::accionSiete(pilaOperadores); break;
+            case 2008: Semantico::accionOcho(pilaOperadores); break;
+            case 2009: Semantico::accionNueve(pilaTipos, pilaOperadores); break;
         default: break;
         } 
     }
 
+    //Acciones para generacion de IR----------------------------------------------------------------------------
+    void accionesIR(string lexema, std::string gramema, int valorAccion, stack<string>& pilaOperandos, stack<string>& pilaOperadores, stack<int>& pilaSaltos) {
+        switch (valorAccion) {
+            //expresiones
+            case 3001: GeneracionIR::insertarOperando(lexema, gramema, pilaOperandos); break;
+            case 3002: GeneracionIR::insertarOperador(lexema, gramema, pilaOperadores); break; 
+            case 3003: GeneracionIR::generarCuadruploExpresion(lexema, gramema, pilaOperandos, pilaOperadores); break; 
+            case 3017: GeneracionIR::accionCuadruploExpresion2(lexema, gramema, pilaOperandos, pilaOperadores); break;
+            case 3004: GeneracionIR::generarCuadruploAsignacion(lexema, gramema, pilaOperandos, pilaOperadores); break;  
+            //if 
+            case 3005: GeneracionIR::accionIf(pilaOperadores); break;
+            case 3006: GeneracionIR::accionExpresionIf(pilaOperadores, pilaOperandos); break; 
+            case 3007: GeneracionIR::accionThen(pilaOperandos, pilaSaltos); break;  
+            case 3008: GeneracionIR::accionElse(pilaSaltos); break;  
+            case 3009: GeneracionIR::accionEstatutosIf(pilaSaltos); break;  
+            case 3010: GeneracionIR::accionEndif(pilaOperadores); break;  
+            //do while 
+            case 3011: GeneracionIR::insertarSaltoDo(pilaSaltos); break;   
+            case 3012: GeneracionIR::generarCuadruploDoWhile(lexema, gramema, pilaOperandos, pilaOperadores, pilaSaltos); break;
+            //while
+            case 3013: GeneracionIR::accionWhile(pilaSaltos); break;
+            case 3014: GeneracionIR::accionExprecionWhile(lexema, gramema, pilaOperandos, pilaOperadores); break; 
+            case 3015: GeneracionIR::accionEstatutos(pilaOperandos, pilaSaltos); break;   
+            case 3016: GeneracionIR::accionEndDo(pilaSaltos); break;    
+            //for
+            case 3018: GeneracionIR::accionFor(lexema, pilaOperandos, pilaOperadores); break;
+            case 3019: GeneracionIR::expresionFor1(lexema, pilaOperandos, pilaOperadores); break; 
+            case 3020: GeneracionIR::expresionFor2(lexema, pilaOperandos, pilaOperadores); break; 
+            case 3021: GeneracionIR::accionEstatutosFor(pilaOperandos, pilaSaltos); break;  
+            case 3022: GeneracionIR::accionEndfor(pilaSaltos); break;
+
+            default: break;
+        }
+    }
+
     void analizar(std::string lexema, std::string gramema) {
-        //Llamada a acciones semanticas 
+        //Llamada a generacion IR --------------------------------------------------------------
+        if (!pila.empty())
+        {
+            int top = pila.top();
+
+            // Acciones IR 
+            if (top >= 3001 && top <= 3022)
+            {
+                //std::cout << "[IR] Acción detectada en pila: " << top << std::endl;
+                accionesIR(
+                    lexema,
+                    gramema,
+                    top,
+                    pilaOperandosIR,
+                    pilaOperadoresIR,
+                    pilaSaltos
+                );
+
+                pila.pop();
+            }
+        }
+
+        //Llamada a acciones semanticas --------------------------------------------------------
         if (!pila.empty()) {
             int top = pila.top();
 
@@ -251,7 +314,7 @@ public:
             }
         }
 
-        //validaciones
+        //validaciones-------------------------------------------------------------------------
         //si es comentario paso al siguiente token
         if (gramema == "Cometario de linea" || gramema == "Comentario de bloque") {
             Token token = lexico.siguienteToken();
@@ -260,6 +323,7 @@ public:
         }
         if (lexema == "" && pila.empty()) {
             std::cout << "Analisis finalizado, la sintaxis es Correcta!." << std::endl;
+            Reset();  
             return;
         }
         if (lexema != "" && !pila.empty()) {
@@ -268,11 +332,12 @@ public:
         }
         else {
             std::cout << "Final inesperado." << std::endl;
+            Reset();  
             return;
         }
         
 
-        //si tope es igual lo saco y paso al siguiente
+        //si tope es igual lo saco y paso al siguiente-------------------------------------------
         if (!pila.empty() && pila.top() == valorToken) {
             //std::cout << "saca1: " << pila.top() << std::endl; //Debug lines
             pila.pop();
@@ -298,6 +363,7 @@ public:
         if (valorMP >= 600 || pila.empty()) {
             //std::cout << "top   : " << pila.top() << std::endl;  //Debug lines
             std::cout << "Ha ocurrido un error!: " << error(valorMP) << std::endl;
+            Reset();  
             return;
         }
 
@@ -333,10 +399,11 @@ public:
         }
 
         if (lexema != "" && pila.empty()) {
-            std::cout << "Final de archivo inesperado: " << std::endl;
+            std::cout << "Final de archivo inesperado: " << std::endl;  
+            Reset();  
             return;
         }
-        
+        //----------------------------------------------------------------------------------
     }
 
     int nuevaColumna(int valToken) { 
@@ -400,9 +467,9 @@ public:
         if (lexema == "-") return 1013;
         if (lexema == "==") return 1014;
         if (lexema == "!=") return 1015;
-        if (lexema == "<") return 1016;
+        if (lexema == "< ") return 1016;
         if (lexema == "<=") return 1017;
-        if (lexema == ">") return 1018;
+        if (lexema == "> ") return 1018;
         if (lexema == ">=") return 1019;
         if (lexema == "*") return 1020;
         if (lexema == "/") return 1021;
@@ -622,63 +689,22 @@ public:
 
         default: return "Codigo de error desconocido";
         }
-
     }
-    /*   EXAMPLE OF CORRECT GRAMMATIC
 
-include math.lib;
-include iostream.lib;
 
-        def NumeroEntero of int;
-        def NumeroDecimal of float;
-        def Palabra of string;
+    void Reset() 
+    {
+        while (!pila.empty()) pila.pop();
+        while (!pilaTipos.empty()) pilaTipos.pop();
+        while (!pilaOperadores.empty()) pilaOperadores.pop();
+        while (!pilaOperandosIR.empty()) pilaOperandosIR.pop();
+        while (!pilaOperadoresIR.empty()) pilaOperadoresIR.pop();
+        while (!pilaSaltos.empty()) pilaSaltos.pop();
 
-        const CONSTANTE = 1 ;
-
-        function Analizar = int(S = int)
-            def VariableDeFuncion of int;
-            --N;
-            return S - N;
-        endfunction
-
-        function Relacionar = string(P = int)
-            def Hola of string;
-
-            if(X == Y && W >= Z)
-               ++N;
-            endif
-
-            return P;
-
-        endfunction
-
-class
-        while (X == Y)
-             ++X;
-        endwhile
-        do
-
-        dowhile(X==Y  || W != Z)enddo
-
-        if(X==Y)
-
-        elseif(W==Z)
-
-        else
-        endif
-
-        for A ( B to C)
-        endfor
-
-        N = X + B;
-        N++;
-
-        read(N);
-        write(N + B);
-endclass
-
-    */
-
+        // si usas pilas auxiliares:
+        while (!pilaTemporalDeclaraciones.empty()) pilaTemporalDeclaraciones.pop();
+        while (!pilaTemporalAcciones.empty()) pilaTemporalAcciones.pop();
+    } 
 };
 
 

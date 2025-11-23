@@ -1,23 +1,31 @@
-﻿  GeneracionIR.cpp
-  MyForm.cpp
-C:\Users\victo\source\repos\Talos\Analizador\Lexico.h(63,19): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+﻿  MyForm.cpp
+C:\Users\victo\source\repos\Talos\Analizador\Lexico.h(66,19): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
   (compilando archivo de origen "MyForm.cpp")
   
-C:\Users\victo\source\repos\Talos\Analizador\Sintactico.h(316,31): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\victo\source\repos\Talos\Analizador\GeneracionIR.h(358,26): warning C4018: '>=': no coinciden signed/unsigned
+  (compilando archivo de origen "MyForm.cpp")
+  
+C:\Users\victo\source\repos\Talos\Analizador\Sintactico.h(382,31): warning C4018: '<': no coinciden signed/unsigned
   (compilando archivo de origen "MyForm.cpp")
   
   Sintactico.cpp
-C:\Users\victo\source\repos\Talos\Analizador\Lexico.h(63,19): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+C:\Users\victo\source\repos\Talos\Analizador\Lexico.h(66,19): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
   (compilando archivo de origen "Sintactico.cpp")
   
-C:\Users\victo\source\repos\Talos\Analizador\Sintactico.h(316,31): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\victo\source\repos\Talos\Analizador\GeneracionIR.h(358,26): warning C4018: '>=': no coinciden signed/unsigned
+  (compilando archivo de origen "Sintactico.cpp")
+  
+C:\Users\victo\source\repos\Talos\Analizador\Sintactico.h(382,31): warning C4018: '<': no coinciden signed/unsigned
   (compilando archivo de origen "Sintactico.cpp")
   
   main.cpp
-C:\Users\victo\source\repos\Talos\Analizador\Lexico.h(63,19): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+C:\Users\victo\source\repos\Talos\Analizador\Lexico.h(66,19): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
   (compilando archivo de origen "main.cpp")
   
-C:\Users\victo\source\repos\Talos\Analizador\Sintactico.h(316,31): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\victo\source\repos\Talos\Analizador\GeneracionIR.h(358,26): warning C4018: '>=': no coinciden signed/unsigned
+  (compilando archivo de origen "main.cpp")
+  
+C:\Users\victo\source\repos\Talos\Analizador\Sintactico.h(382,31): warning C4018: '<': no coinciden signed/unsigned
   (compilando archivo de origen "main.cpp")
   
   Generando código...

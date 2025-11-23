@@ -13,6 +13,8 @@ class Semantico
 {
 public:
 
+    ~Semantico() {} 
+
     static const char matrizCompatibilidad[21][14];
 
 
@@ -94,7 +96,7 @@ public:
             
             string op = pilaOperadores.top();
 
-            if (op == "*" || op == "/" || op == "%" || op == "&&")
+            if (op == "*" || op == "/" || op == "%" || op == "**" || op == "&&") 
             {
                 //cout << "entra 3: "  << endl;
                 char tipo2 = pilaTipos.top(); pilaTipos.pop();
@@ -290,6 +292,35 @@ public:
 
         return matrizCompatibilidad[fila][columna];
     }
+    static void Reset()
+    {
+        declaraciones.clear();
+        erroresSemanticos.clear();
+    } 
+
+
 }; 
 
+/*
+funciones
+postincunarios
 
+include math.lib;
+
+        def E of int;
+        def R of float;
+        def C of char;
+        def E of float;
+
+class
+    A = A + A;
+    R = R + R + R / C;
+    R = X + X;
+    E = E * (E + C);
+    C = R + C * E ;
+    R = R * R;
+    X = X + 1;
+endclass
+
+
+*/
