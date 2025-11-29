@@ -82,9 +82,10 @@ public:
             actual++;
 
             if (estado >= 100 && estado <= 199) {
-                if (estado <= 109 || estado > 134) {
+                if ((estado <= 109 || estado > 134) || estado == 111 || estado == 113) {
                     actual--;
                 }
+
 
                 int idxInicio = inicio - entrada;
                 int idxActual = actual - entrada;
@@ -150,10 +151,10 @@ public:
                 un lexema es el conjunto de caracteres - 1, porque para determinar un lexema, es a partrir del caracter que 
                 sigue de el.
                 */
-                if (estado <= 109 || estado > 134 ) {
-                    actual--;
-                }
-                
+                if ((estado <= 109 || estado > 134) || estado == 111 || estado == 113) { 
+                    actual--; 
+                }  
+
                 int idxInicio = inicio - entrada;
                 int idxActual = actual - entrada;
                 //Lexema

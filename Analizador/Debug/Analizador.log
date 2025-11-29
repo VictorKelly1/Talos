@@ -1,4 +1,8 @@
-﻿  MyForm.cpp
+﻿  Lexico.cpp
+C:\Users\victo\source\repos\Talos\Analizador\Lexico.h(66,19): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  (compilando archivo de origen "Lexico.cpp")
+  
+  MyForm.cpp
 C:\Users\victo\source\repos\Talos\Analizador\Lexico.h(66,19): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
   (compilando archivo de origen "MyForm.cpp")
   

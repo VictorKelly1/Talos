@@ -467,9 +467,9 @@ public:
         if (lexema == "-") return 1013;
         if (lexema == "==") return 1014;
         if (lexema == "!=") return 1015;
-        if (lexema == "< ") return 1016;
+        if (lexema == "<") return 1016;
         if (lexema == "<=") return 1017;
-        if (lexema == "> ") return 1018;
+        if (lexema == ">") return 1018;
         if (lexema == ">=") return 1019;
         if (lexema == "*") return 1020;
         if (lexema == "/") return 1021;
